@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: flask-image-app-container
-        image: gcr.io/white-proxy-434723-d6/flask-image-app:latest
+        image: docker.io/rakeshbasnet/flask-s3file-upload:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
-      - name: gcr-json-key
+      - name: dockerhub-secret
