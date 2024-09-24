@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-image-app-container
-        image: docker.io/rakeshbasnet/flask-s3file-upload:latest
+        image: rakeshbasnet/flask-s3file-upload:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
