@@ -14,7 +14,29 @@ spec:
     spec:
       containers:
       - name: flask-image-app-container
-        image: rakeshbasnet/flask-s3file-upload:latest
+        image: rakeshbasnet/flask-s3file-upload:ImageTag
+        env:
+        - name: S3_BUCKET
+          valueFrom:
+            secretRef:
+              name: s3-credentials
+              key: S3_BUCKET
+
+        - name: S3_REGION
+          valueFrom:
+            secretRef:
+              name: s3-credentials
+              key: S3_REGION
+        - name: AWS_ACCESS_KEY
+          valueFrom:
+            secretRef:
+              name: s3-credentials
+              key: AWS_ACCESS_KEY
+        - name: AWS_SECRET_KEY
+          valueFrom:
+            secretRef:
+              name: s3-credentials
+              key: AWS_SECRET_KEY
         ports:
         - containerPort: 80
       imagePullSecrets:
