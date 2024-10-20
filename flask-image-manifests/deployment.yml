@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-image-app-container
-        image: rakeshbasnet/flask-s3file-upload:20
+        image: rakeshbasnet/flask-s3file-upload:21
         env:
         - name: S3_BUCKET
           valueFrom:
