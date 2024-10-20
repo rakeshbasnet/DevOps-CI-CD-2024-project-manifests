@@ -18,23 +18,23 @@ spec:
         env:
         - name: S3_BUCKET
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: s3-credentials
               key: S3_BUCKET
 
         - name: S3_REGION
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: s3-credentials
               key: S3_REGION
         - name: AWS_ACCESS_KEY
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: s3-credentials
               key: AWS_ACCESS_KEY
         - name: AWS_SECRET_KEY
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: s3-credentials
               key: AWS_SECRET_KEY
         ports:
